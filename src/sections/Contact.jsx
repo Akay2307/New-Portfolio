@@ -15,19 +15,19 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "pedro@example.com",
-    href: "mailto:pedro@example.com",
+    value: "akinbolabinuyo@gmail.com",
+    href: "mailto:akinbolabinuyo@gmail.com",
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+1 (555) 123-4567",
-    href: "tel:+15551234567",
+    value: "+2348161228070",
+    href: "tel:+2348161228070",
   },
   {
     icon: MapPin,
     label: "Location",
-    value: "San Francisco, CA",
+    value: "Lagos, Nigeria",
     href: "#",
   },
 ];
@@ -60,16 +60,18 @@ const Contact = () => {
         );
       }
 
-      await emailjs.send(
-        serviceId,
-        templateId,
-        {
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-        },
-        publicKey
-      );
+      // Initialize EmailJS client (optional but ensures public key is set)
+      emailjs.init(publicKey);
+
+      // Map form fields to the variables used by your EmailJS template.
+      // Common variable names: `from_name`, `from_email`, `message`
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+      };
+
+      await emailjs.send(serviceId, templateId, templateParams);
 
       setSubmitStatus({
         type: "success",
@@ -77,11 +79,10 @@ const Contact = () => {
       });
       setFormData({ name: "", email: "", message: "" });
     } catch (err) {
-      console.error("EmailJS error:", error);
+      console.error("EmailJS error:", err);
       setSubmitStatus({
         type: "error",
-        message:
-          error.text || "Failed to send message. Please try again later.",
+        message: err.text || err.message || "Failed to send message. Please try again later.",
       });
     } finally {
       setIsLoading(false);
@@ -124,6 +125,7 @@ const Contact = () => {
                 </label>
                 <input
                   id="name"
+                  name="name"
                   type="text"
                   required
                   placeholder="Your name..."
@@ -136,14 +138,13 @@ const Contact = () => {
               </div>
 
               <div>
-                <label
-                  htmlFor="email"
-                  type="email"
-                  className="block text-sm font-medium mb-2"
-                >
+                <label htmlFor="email" className="block text-sm font-medium mb-2">
                   Email
                 </label>
                 <input
+                  id="email"
+                  name="email"
+                  type="email"
                   required
                   placeholder="your@email.com"
                   value={formData.email}
@@ -162,6 +163,8 @@ const Contact = () => {
                   Message
                 </label>
                 <textarea
+                  id="message"
+                  name="message"
                   rows={5}
                   required
                   value={formData.message}

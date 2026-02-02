@@ -4,12 +4,12 @@ import AnimatedBorderButton from '../components/AnimatedBorderButton'
 
 const projects = [
   {
-    title: "Fintech Dashboard",
+    title: "Gold Mining website",
     description:
-      "A comprehensive financial analytics platform with real-time data visualization, portfolio management, and AI-powered insights.",
-    image: "/projects/project1.png",
-    tags: ["React", "Typescript", "NodeJS"],
-    link: "#",
+      "A comprehensive website for a gold mining company with interactive maps, real-time news and events and a responsive design.",
+    image: "/projects/project1.JPG",
+    tags: ["React", "Javascript", "NodeJS"],
+    link: "https://broc-v2dt.vercel.app/",
     github: "#",
   },
   {
