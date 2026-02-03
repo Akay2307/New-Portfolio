@@ -6,7 +6,7 @@ const experiences = [
     company: "Tech Innovators Inc.",
     description:
       "Leading frontend architecture for a suite of fintech products. Implemented micro-frontend architecture, reduced bundle size by 40%, and mentored a team of 5 developers.",
-    technologies: ["React", "TypeScript", "Next.js", "GraphQL"],
+    technologies: ["React", "JavaScript", "Node.js", "Express"],
     current: true,
   },
   {

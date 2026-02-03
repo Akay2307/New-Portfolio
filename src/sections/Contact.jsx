@@ -66,8 +66,8 @@ const Contact = () => {
       // Map form fields to the variables used by your EmailJS template.
       // Common variable names: `from_name`, `from_email`, `message`
       const templateParams = {
-        from_name: formData.name,
-        from_email: formData.email,
+        name: formData.name,
+        email: formData.email,
         message: formData.message,
       };
 
