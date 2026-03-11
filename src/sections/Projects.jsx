@@ -13,21 +13,21 @@ const projects = [
     github: "#",
   },
   {
-    title: "E-Commerce Platform",
+    title: "Cleaning Services Website",
     description:
-      "A full-featured e-commerce solution with inventory management, payment processing, and analytics dashboard.",
-    image: "/projects/project2.png",
-    tags: ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
-    link: "#",
+      "The website features a modern interface with smooth animations, responsive layouts for all screen sizes, and well-structured service pages tailored for both private and commercial clients. It also includes a dynamic contact and booking form, an admin dashboard for managing inquiries, and SEO-optimized pages to improve online visibility.",
+    image: "/projects/clean.JPG",
+    tags: ["React", "JavaScript", "Node.js", "Express", "MongoDB"],
+    link: "https://mfs-three.vercel.app/",
     github: "#",
   },
   {
-    title: "AI Writing Assistant",
+    title: "Diner Reservation System",
     description:
-      "An intelligent writing tool powered by GPT-4, helping users create better content faster.",
-    image: "/projects/project3.png",
-    tags: ["React", "OpenAI", "Python", "FastAPI"],
-    link: "#",
+      "The website features a responsive and modern interface, ensuring seamless use across desktops, tablets, and mobile devices. It includes an interactive reservation form, real-time validation, and a backend system that securely stores and manages booking information. Restaurant administrators can access reservation data and manage bookings through a structured system.",
+    image: "/projects/diner.JPG",
+    tags: ["React", "Node.js", "Tailwind CSS", "MongoDB"],
+    link: "https://haykays-diner.vercel.app/",
     github: "#",
   },
   {
