@@ -26,16 +26,16 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 transition-all duration-500 ${
-        isScrolled ? "glass-strong py-3" : "bg-transparent py-5"
-      }  z-50`}
+      className={`fixed top-0 left-0 right-0 transition-all duration-500 ${isScrolled ? "glass-strong py-3" : "bg-transparent py-5"
+        }  z-50`}
     >
       <nav className="container mx-auto px-6 flex items-center justify-between">
-        <a
-          href="#"
-          className="text-xl font-bold tracking-tight hover:text-primary"
-        >
-          HayKay<span className="text-primary">.</span>
+        <a href="/">
+          <img
+            src="/image.png"
+            alt="Logo"
+            className="h-10 w-10 cursor-pointer"
+          />
         </a>
 
         {/* Desktop Nav */}
@@ -55,20 +55,20 @@ const Navbar = () => {
 
         {/* CTA Button */}
         <a href="#contact">
-            <div className="hidden md:block">
-          <Button size="sm">Contact Me</Button>
-        </div>
+          <div className="hidden md:block">
+            <Button size="sm">Contact Me</Button>
+          </div>
         </a>
-        
+
 
         {/* Mobile Menu Button */}
-          <button
+        <button
           className="md:hidden p-2 text-foreground cursor-pointer"
           onClick={() => setIsMobileMenuOpen((prev) => !prev)}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
-        
+
       </nav>
 
       {/* Mobile Menu */}
@@ -86,7 +86,7 @@ const Navbar = () => {
               </a>
             ))}
 
-            
+
             <Button onClick={() => setIsMobileMenuOpen(false)}>
               Contact Me
             </Button>

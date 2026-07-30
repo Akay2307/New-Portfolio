@@ -31,12 +31,12 @@ const projects = [
     github: "#",
   },
   {
-    title: "Project Management Tool",
+    title: "Yadds Machines Website",
     description:
-      "A collaborative workspace for teams with real-time updates, task tracking, and integrations.",
-    image: "/projects/project4.png",
-    tags: ["Next.js", "Socket.io", "MongoDB", "Redis"],
-    link: "#",
+      "Developed a modern, responsive corporate website for an industrial machinery company, featuring product showcases, service pages and an integrated contact system. Optimized the site for performance, SEO, and cross-device compatibility while deploying it to production with custom domain configuration.",
+    image: "/projects/Hero.JPG",
+    tags: ["React", "Tailwind", "JavaScript", "EmailJS"],
+    link: "https://www.yaddsmachines.com/",
     github: "#",
   },
 ];
